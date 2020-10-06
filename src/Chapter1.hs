@@ -651,7 +651,9 @@ You need to use recursion in this task. Feel free to return to it later, if you
 aren't ready for this boss yet!
 -}
 
-firstDigit n = error "firstDigit: Not implemented!"
+firstDigit n
+  | n < 10 = n
+  | n >= 10 = firstDigit(div n 10)
 
 
 {-
