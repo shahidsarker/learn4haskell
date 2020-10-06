@@ -560,8 +560,10 @@ True
 >>> isVowel 'x'
 False
 -}
-isVowel c = error "isVowel: not implemented!"
-
+isVowel :: Char -> Bool
+isVowel c
+  | c == 'a' || c =='e' || c =='i' || c == 'o' || c == 'u' = True
+  | c /= 'a' || c /='e' || c /='i' || c /= 'o' || c /= 'u' = False
 
 {- |
 == Local variables and functions
